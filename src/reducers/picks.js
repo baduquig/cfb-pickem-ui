@@ -3,7 +3,7 @@ export default (picks = [], action) => {
         case 'FETCH_ALL':
             return action.payload;
         case 'UPDATE':
-            return picks.map((pick) => (pick._id === action.payload._id ? action.payload : post));
+            return picks.map((pick) => (pick._id === action.payload._id ? action.payload : pick));
         default:
             return picks;
     }

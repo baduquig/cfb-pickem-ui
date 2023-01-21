@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import { getPicks } from './actions/picks';
 
+import Body from './components/Body/Body';
+
 
 const App = () => {
     const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const App = () => {
     });
 
     return (
-        <div>Hi</div>
+        <Body />
     )
 }
 
