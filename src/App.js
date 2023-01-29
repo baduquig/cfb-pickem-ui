@@ -5,6 +5,7 @@ import { getPicks } from './actions/picks';
 
 import Body from './components/Body/Body';
 
+import './index.css';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -14,7 +15,9 @@ const App = () => {
     });
 
     return (
-        <Body />
+        <div className='container'>
+            <Body />
+        </div>
     )
 }
 
