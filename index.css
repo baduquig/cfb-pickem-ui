@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cfb-container {
+    background-color: #606163;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.cfb-title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cfb-text-inputs input {
+    border: .5px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 30px;
+    text-align: center;
+}
+
+.cfb-button-inputs button {
+    background-color: #2da318;
+    border: .5px solid #2da318;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px 30px;
+}

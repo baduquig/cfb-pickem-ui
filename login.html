@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <!-- Google Fonts CDN (Montserrat ExtraLight 200 font) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./index.css">
+    </head>
 
     <body>
 
@@ -16,18 +23,25 @@
             <div class="cfb-content">
 
                 <!-- Text Input Fields -->
-                <div id="login-inputs">
-                    <input type="text" name="username" id="username">
-                    <input type="password" name="pw" id="pw">
+                <div class="cfb-text-inputs">
+                    <div id="username-div">
+                        <input type="text" name="username" id="username" placeholder="Username">
+                    </div>
+
+                    <div id="password-div">
+                        <input type="password" name="pw" id="pw" placeholder="Password">
+                    </div>
                 </div>
 
                 <!-- Button Inputs -->
-                <div id="login-buttons">
-                    <span id="login-new-user">
-                        <a href="">New User</a>
-                    </span>
+                <div class="cfb-button-inputs">
+                    <div id="login-new-user">
+                        <span>
+                            <a href="">New User</a>
+                        </span>
+                    </div>
 
-                    <input type="button" id="sign-in">
+                    <button id="sign-in">Sign in!</button>
                 </div>
 
             </div><!-- Page Content -->
