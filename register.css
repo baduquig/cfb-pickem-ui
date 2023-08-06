@@ -1,0 +1,13 @@
+#register-inputs {
+    padding-top: 20vh;
+}
+
+#register-inputs div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#register-create {
+    margin: 0 auto;
+    width: 60%;
+}

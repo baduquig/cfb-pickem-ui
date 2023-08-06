@@ -6,10 +6,6 @@ body {
     padding: 0;
 }
 
-button {
-    margin-top: 10px;
-}
-
 a {
     color: #031e96;
     font-weight: bolder;
@@ -25,29 +21,26 @@ a {
     width: 100%;
 }
 
-.cfb-title {
-    
-}
-
 .cfb-text-inputs input {
     border: .5px solid white;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 5px;
+    padding: 5px;
     padding: 5px 30px;
     text-align: center;
 }
 
-.cfb-button-inputs button {
+button {
     background-color: #2da318;
     border: .5px solid #2da318;
     border-radius: 5px;
     font-size: 16px;
+    padding-top: 10px;
     padding: 8px 30px;
 }
 
 .cfb-center-div {
-    margin-bottom: 15px;
-    margin-top: 30vh;
+    padding-top: 30vh;
+    padding-bottom: 15px;
 }
