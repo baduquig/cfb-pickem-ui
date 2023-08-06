@@ -1,6 +1,19 @@
 body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     margin: 0;
     padding: 0;
+}
+
+button {
+    margin-top: 10px;
+}
+
+a {
+    color: #031e96;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 .cfb-container {
@@ -13,8 +26,7 @@ body {
 }
 
 .cfb-title {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .cfb-text-inputs input {
@@ -33,4 +45,9 @@ body {
     border-radius: 5px;
     font-size: 16px;
     padding: 8px 30px;
+}
+
+.cfb-center-div {
+    margin-bottom: 15px;
+    margin-top: 30vh;
 }
