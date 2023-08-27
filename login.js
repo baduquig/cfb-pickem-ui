@@ -1,25 +1,27 @@
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('pw');
-const signinButton = document.getElementById('sign-in');
-const usernamePopulated = usernameInput.value.trim() !== '';
-const passwordPopulated = passwordInput.value.trim() !== '';
 const registerLink = document.getElementById('login-new-user');
 const loginEndpoint = 'http://gbaduqui.pythonanywhere.com/validate?';
 
-usernameInput.addEventListener('input', () => {
+let usernameInput = document.getElementById('username');
+let passwordInput = document.getElementById('pw');
+let signinButton = document.getElementById('sign-in');
+
+checkInputsPopulated = () => {
+    let usernamePopulated = usernameInput.value.length > 0;
+    let passwordPopulated = passwordInput.value.length > 0;
+
     if ((usernamePopulated) && (passwordPopulated)) {
-        signinButton.style.display = 'block';
+        signinButton.style.visibility = 'visible';
     } else {
-        signinButton.style.display = 'none';
+        signinButton.style.visibility = 'hidden';
     }
+}
+
+usernameInput.addEventListener('input', () => {
+    checkInputsPopulated();
 });
 
 passwordInput.addEventListener('input', () => {
-    if ((usernamePopulated) && (passwordPopulated)) {
-        signinButton.style.display = 'block';
-    } else {
-        signinButton.style.display = 'none';
-    }
+    checkInputsPopulated();
 });
 
 signinButton.addEventListener('click', () => {
@@ -45,4 +47,4 @@ signinButton.addEventListener('click', () => {
     }    
 });
 
-signinButton.style.display = 'none';
+signinButton.style.visibility = 'hidden';
