@@ -1,13 +1,13 @@
-#register-inputs {
-    padding-top: 20vh;
+#register-inputs input {
+    border-style: solid;
+    border-width: 2.5px;
 }
 
-#register-inputs div {
-    margin-top: 15px;
-    margin-bottom: 15px;
+#register-username {
+    margin-bottom: 50px;
 }
 
 #register-create {
-    margin: 25px auto;
+    margin: 0 auto;
     width: 60%;
 }
