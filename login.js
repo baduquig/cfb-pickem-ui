@@ -4,6 +4,8 @@ const loginEndpoint = 'http://gbaduqui.pythonanywhere.com/validate?';
 let usernameInput = document.getElementById('username');
 let passwordInput = document.getElementById('pw');
 let signinButton = document.getElementById('sign-in');
+let signinLink = document.getElementById('sign-in-link');
+let userNotFound = document.getElementById('user-not-found');
 
 checkInputsPopulated = () => {
     let usernamePopulated = usernameInput.value.length > 0;
@@ -24,6 +26,14 @@ passwordInput.addEventListener('input', () => {
     checkInputsPopulated();
 });
 
+usernameInput.addEventListener('change', () => {
+    userNotFound.style.visibility = 'hidden';
+});
+
+passwordInput.addEventListener('change', () => {
+    userNotFound.style.visibility = 'hidden';
+});
+
 signinButton.addEventListener('click', () => {
     if ((usernamePopulated) && (passwordPopulated)) {
         const userID = '';
@@ -40,11 +50,15 @@ signinButton.addEventListener('click', () => {
             .then(data => {
                 console.log(response.message);
                 userID = data[0];
+                signinLink.href = `./pickem.html?userID=${userID}`;
+                signinLink.click();
             })
             .catch(error => {
                 console.log(error);
+                userNotFound.style.visibility = 'visible';
             });
-    }    
+    }
 });
 
 signinButton.style.visibility = 'hidden';
+userNotFound.style.visibility = 'hidden';
