@@ -1,12 +1,23 @@
 const currentTimestamp = new Date();
 const urlParams = new URLSearchParams(window.location.search);
 const userID = urlParams.get('userID');
+const weekDropdown = document.getElementById('pickem-week');
 const gameWeeks = [];
-const firstGameday = new Date('2023-08-26');
+const nextGameday = new Date('2023-08-26');
+let currentWeek = 0;
+let weekOptions = '';
 
-for (i = 0; i < 16; i++) {
-    //const nextDate = firstGameday + (7 * i);
-    const nextDate = firstGameday.setDate(firstGameday.getDate() + (7 * i));
+const setWeekdropdown = () => {
+    // Set Week Dropdown //
+    for (i = 0; i < 15; i ++) {
+        weekOptions += '<option value="' + i + '">' + i + '</option>';
+    }
+    weekDropdown.innerHTML = weekOptions;
+    while (nextGameday < currentTimestamp) {
+        nextGameday.setDate(nextGameday.getDate() + 7);
+        currentWeek ++;
+        weekDropdown.value = currentWeek;
+    }
 }
 
 // Instantiage All Data //
@@ -30,3 +41,6 @@ fetch('http://gbaduqui.pythonanywhere.com/alldata')
     .catch(error => {
         console.log(error);
     });
+
+// Set Week Dropdown //
+setWeekdropdown();
